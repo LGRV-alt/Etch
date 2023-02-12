@@ -3,20 +3,21 @@ h1{
 }
 
 
+
+
 #board{
     outline: solid;
-    height: 400px;
-    width: 390px;
-    display: flex;
-    flex-wrap: wrap;
-    
+    height: 500px;
+    width: 500px;
+    display: grid;
+    /* grid-template: repeat(16, 1fr) / repeat(16, 1fr);  */
 }
 
 
 
 div{
-    display: flex;
-    margin: 0px -4px 0 0;
     
-    
+    outline: solid;
+   
+
 }

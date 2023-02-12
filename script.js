@@ -1,58 +1,36 @@
 console.log("Hello")
 
-let score = 16
+let size = 16
 
 
 const create = document.getElementById("create");
 const reset = document.getElementById("reset");
+const container = document.getElementById("board");
+container.style.backgroundColor = "red";
+container.style.gridTemplate = `repeat(${size}, 1fr) / repeat(${size}, 1fr`
 
-
-
-// create.addEventListener("click", function(){
-//     makeSomething();
-// })
 
 
 let makeSomething = function(){
-    for(let i = 0; i < score; i++){
-        let div = document.createElement("div");
-            div.style.width = "100px";
-            div.style.height = "100px";
-            div.style.background = "red";
-            div.style.outline = "solid";
-            
-        document.getElementById("board").appendChild(div);
-
-        div.addEventListener("mouseover", function(){
-            div.style.background = "white";
-
-        reset.addEventListener("click", function(){
-            div.style.background = "red";
+    for (let i = 0; i < size * size; i++){
+        let cell = document.createElement("div");
+        document.getElementById("board").appendChild(cell);
+        cell.addEventListener("mouseover", function(){
+            cell.style.backgroundColor = "white";
         })
-        })
-        
     }
 }
 
-// create.addEventListener("click", function(){
-//     makeSomething();
-// })
-
 create.addEventListener("click", makeSomething);
+
+
 create.addEventListener("click", function(){
     create.disabled = true;
 })
 
-reset.addEventListener("click", function(){
-    div.style.background = "red";
-})
 
 
-let colorBlock = function(){
-    div.addEventListener("click", function(){
-        div.style.background="white";
-    })
-}
+
 
 
 
