@@ -2,7 +2,9 @@ h1{
     color: blue;
 }
 
-
+.changeColor{
+    background-color: red;
+}
 
 
 #board{
@@ -10,14 +12,33 @@ h1{
     height: 500px;
     width: 500px;
     display: grid;
-    /* grid-template: repeat(16, 1fr) / repeat(16, 1fr);  */
+}
+
+
+div:hover {
+    background-color: grey;
+    cursor: pointer;
+}
+
+.coloured{
+    outline: solid;
+}
+
+.boxes{
+    /* outline: solid; */
+    border:0.05px solid lightgrey;
 }
 
 
 
-div{
-    
-    outline: solid;
-   
+#main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
 
+
+.remove{
+    background-color: white;
 }
