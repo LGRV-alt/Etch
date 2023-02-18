@@ -15,17 +15,12 @@ h1{
 }
 
 
-div:hover {
-    background-color: grey;
-    cursor: pointer;
-}
-
 .coloured{
     outline: solid;
 }
 
 .boxes{
-    /* outline: solid; */
+    
     border:0.05px solid lightgrey;
 }
 
