@@ -3,7 +3,7 @@ console.log("Hello")
 let size = 20
 let color = "white"
 
-let changing = "noChange"
+
 
 //Buttons from the page
 const reset = document.getElementById("reset");
@@ -17,9 +17,6 @@ const thirty = document.getElementById("30x30");
 
 
 container.style.backgroundColor = "white";
-
-
-
 
 let makeGrid = function(){
     container.style.gridTemplate = `repeat(${size}, 1fr) / repeat(${size}, 1fr`
@@ -70,23 +67,19 @@ let makeThirty = function(){
 // Color changes with linked to buttons
 let changeColor = function(){
     black.addEventListener("click", function(){
-        changing = "noChange";
-        color = "black";
-        colorChanging();
-        console.log(changing)
-        console.log(color);
+        changing = "black";
+        toggleColor();
     })
 
     random.addEventListener("click", function(){
-        changing = "change";
-        colorChanging();
-        console.log(changing)
-        console.log(color);
+        changing = "random";
+        toggleColor();
     })
 
     erase.addEventListener("click", function(){
-        color = "white";
-        console.log(changing)
+        changing = "noChange";
+        toggleColor();
+
     })
 
 }
@@ -103,28 +96,24 @@ function generateColor(){
     return `#${color}`
 }
 
-// Sets the generateColor() function change every 10ms
-// function randomColor(){
-//     if(changing !== "noChange"){
-//     setInterval(
-//         function() {
-//             color = generateColor();
-//         }, 1)}else{
-
-
-//         }
-// }
-
-
+// Function taking generateColor and adding it to the color variable
 function randomColor(){
     color = generateColor();
 }
 
-function colorChanging(){
-    if(changing ==="change"){
-        setInterval(randomColor, 1);
+// Toggle the random colors with the changing variable and setInterval
+let colorChange 
+let changing = "noChange"
+function toggleColor(){
+    if (changing === "random"){
+        colorChange = setInterval(randomColor, 1);
+    } else if(changing ==="black"){
+        clearInterval(colorChange);
+        color = "black";
     } else{
-        clearInterval(randomColor);
+        clearInterval(colorChange);
+        color = "white";
+
     }
 }
 
@@ -138,7 +127,6 @@ let play = function(){
     ten.addEventListener("click", makeTen);
     twenty.addEventListener("click", makeTwenty);
     thirty.addEventListener("click", makeThirty);
-    // random.addEventListener("click", colorChanging);
     changeColor();
     
 
