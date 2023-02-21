@@ -1,39 +1,116 @@
+html{
+    background-color: rgb(0, 223, 186);
+}
+
 h1{
-    color: blue;
+    display:flex;
+    flex-direction: column;
+    color: black;
 }
 
 .changeColor{
     background-color: red;
 }
 
+#rightButtons{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 40px;
+    margin-left: 50px;
+}
+
+#leftButtons{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 40px;
+    margin-right: 50px;
+    
+}
 
 #board{
     outline: solid;
     height: 500px;
     width: 500px;
     display: grid;
+    margin-bottom: 10px;
 }
 
+#outerBoard{
+    width: 550px;
+    height: 650px;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid black 5px;
+    border-radius: 30px;
+}
+
+
+#boardTitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;      
+}
+
+#boardInfo{
+    display: flex;
+    justify-content: space-evenly;
+    width: 500px;
+}
 
 .coloured{
     outline: solid;
 }
 
 .boxes{
-    
     border:0.05px solid lightgrey;
 }
-
-
 
 #main{
     display: flex;
     justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 100px;
+    
+}
+
+#mainBoard{
+    display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
-
 .remove{
     background-color: white;
+  
+}
+
+
+#reset{
+    margin-top: 5px;
+    width: 400px;
+    height: 40px;
+    border-radius: 10px;
+
+}
+
+button{
+    width: 100px;
+    height: 100px;
+    border: solid black 2px;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+}
+
+button:hover{
+    background-color: white;
+    color:black;
+    cursor: pointer;
 }
