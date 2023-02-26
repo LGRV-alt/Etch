@@ -16,7 +16,7 @@ const twenty = document.getElementById("20x20");
 const thirty = document.getElementById("30x30");
 
 
-container.style.backgroundColor = "white";
+// container.style.backgroundColor = "white";
 
 let makeGrid = function(){
     container.style.gridTemplate = `repeat(${size}, 1fr) / repeat(${size}, 1fr`
